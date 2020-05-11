@@ -32,7 +32,7 @@ def sample_recipe(user, **params):
     """Create and return a sample recipe"""
     defaults = {
         'title': 'Sample recipe',
-        'time_minutes': 10,
+        'time_miniutes': 10,
         'price': 5.00,
     }
     defaults.update(params)
@@ -109,7 +109,7 @@ class PrivateRecipeApiTests(TestCase):
         """Test creating recipe"""
         payload = {
             'title': 'Test recipe',
-            'time_minutes': 30,
+            'time_miniutes': 30,
             'price': 10.00,
         }
         res = self.client.post(RECIPES_URL, payload)
@@ -126,7 +126,7 @@ class PrivateRecipeApiTests(TestCase):
         payload = {
             'title': 'Test recipe with two tags',
             'tags': [tag1.id, tag2.id],
-            'time_minutes': 30,
+            'time_miniutes': 30,
             'price': 10.00
         }
         res = self.client.post(RECIPES_URL, payload)
@@ -145,7 +145,7 @@ class PrivateRecipeApiTests(TestCase):
         payload = {
             'title': 'Test recipe with ingredients',
             'ingredients': [ingredient1.id, ingredient2.id],
-            'time_minutes': 45,
+            'time_miniutes': 45,
             'price': 15.00
         }
 
